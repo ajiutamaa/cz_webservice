@@ -127,7 +127,7 @@
 	?>
 
 	<h1>Test Insert/Update Rate Value</h1>
-	<form action="rating.php" method="post">
+	<form action="inUpRateValue.php" method="post">
 		<table>
 			<tr>
 				<td>username</td>
