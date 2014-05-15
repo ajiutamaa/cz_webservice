@@ -1,9 +1,9 @@
 <?php
 	//Connection information for MySQL database
-	$host = "mysql.idhostinger.com";
-	$dbname = "u832235161_crime";
-	$username = "u832235161_pplc1";
-	$password = "pplc01";
+	$host = "ap-cdbr-azure-southeast-a.cloudapp.net";
+	$dbname = "dbcrimezone";
+	$username = "b64e15843be88e";
+	$password = "1e6f9a40";
 	
 	// //Set communication with MySQL server with UTF-8
 	// $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
