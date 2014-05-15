@@ -26,7 +26,7 @@
 		}
 		else{
                         $response["success"] = 1;
-			$response["message"] = "email or username haven't been registered";
+			$response["message"] = "email haven't been registered";
 			die (json_encode($response));
 		}
 
@@ -43,8 +43,8 @@
 			print json_encode($response);
 		}
 		else {
-			$response["success"] = 0;
-			$response["message"] = "Invalid Credentials";
+			$response["success"] = 1;
+			$response["message"] = "invalid password";
 			die(json_encode($response));
 		}
 	}
