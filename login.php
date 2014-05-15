@@ -40,7 +40,7 @@
 			$response["join_date"] = $row["join_date"];
 			$response["sex"] = $row["sex"];
 			$response["occupation"] = $row["occupation"];
-			die(json_encode($response));
+			print json_encode($response);
 		}
 		else {
 			$response["success"] = 0;
