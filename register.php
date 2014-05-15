@@ -50,7 +50,7 @@
 		$hash = md5(rand(0,1000));
 		
 		//Create new user in User table
-		$q_insert = "INSERT INTO User (email, username, password, hash, active) VALUES (:email, :user, :pass, :hash, '0')";
+		$q_insert = "INSERT INTO User (email, username, password, join_date, hash, active) VALUES (:email, :user, :pass, NOW(), :hash, '0')";
 		$query_params = array(
 			':email' => $_POST['email'],
 			':user' => $_POST['username'],
