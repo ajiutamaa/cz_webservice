@@ -2,27 +2,6 @@
 require("config.php");
 
 if(!empty($_POST)){
-  //Check username input
-  $q_checkusername = "SELECT 1 FROM User WHERE username = :user";
-  $query_params = array(
-    ':user' => $_POST['newUsername']
-    );
-  try{
-    $stmt = $db->prepare($q_checkusername);
-    $result = $stmt->execute($query_params);
-  } catch(PDOException $e){
-    $response["success"] = 0;
-    $response["message"] = "Database Error" . $e->getMessage();
-    die(json_encode($response));
-  }
-
-  $row = $stmt->fetch();
-
-  if($row){
-    $response["success"] = 1;
-    $response["message"] = "Username is already used";
-    die(json_encode($response));
-  }
 
   //Find userID
   $uname = $_POST['username'];
@@ -49,10 +28,9 @@ if(!empty($_POST)){
   }
 
   //username, password, email
-  $q_updatePrimeData = "UPDATE User SET username = :setUsername, firstname = :firstname, lastname = :lastname
+  $q_updatePrimeData = "UPDATE User SET firstname = :firstname, lastname = :lastname
   WHERE userID = :userID";
   $query_params = array(
-   ':setUsername' => $_POST['newUsername'],
    ':firstname' => $_POST['firstname'],
    ':lastname' => $_POST['lastname'],
    ':userID' => $userID,
