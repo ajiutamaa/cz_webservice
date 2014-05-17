@@ -3,7 +3,7 @@
 	$host = "ap-cdbr-azure-southeast-a.cloudapp.net";
 	$dbname = "dbcrimezone";
 	$username = "b64e15843be88e";
-	$password = "1e6f9a40";
+	$password = "29ba19d02e4ae1d ";
 	
 	// //Set communication with MySQL server with UTF-8
 	// $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
