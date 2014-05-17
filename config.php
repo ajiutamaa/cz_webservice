@@ -11,7 +11,7 @@
 	try
 	{
 		//Opens a connection to database using PDO library
-		$db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password, $option);
+		$db = new PDO("mysql:host={$host};dbname={$dbname}", $username, $password);
 	}
 	catch(PDOException $e){
 		die("Failed to connect to the database" . $e->getMessage());
