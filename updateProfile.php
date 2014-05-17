@@ -33,7 +33,6 @@ if(!empty($_POST)){
   $query_params = array(
    ':firstname' => $_POST['firstname'],
    ':lastname' => $_POST['lastname'],
-   ':userID' => $userID,
    );
   try{
     $stmt = $db->prepare($q_updatePrimeData);
