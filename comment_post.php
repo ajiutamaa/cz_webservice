@@ -47,6 +47,7 @@ if(!empty($_POST)){
 
 		$response["success"] = 1;
 		$response["message"] = "Comment successfully submitted";
+		$response["time"] = $now;
                 print json_encode($response);
 	}
 	else {
