@@ -14,7 +14,7 @@ if(!empty($_POST)){
     $result = $stmt->execute($query_params);
   } catch(PDOException $e){
     $response["success"] = 0;
-    $response["message"] = "Database Error 0." . $e->getMessage();
+    $response["message"] = "Atau disini Database Error 0." . $e->getMessage();
     die(json_encode($response));
   }
   $row = $stmt->fetch();
@@ -39,7 +39,7 @@ if(!empty($_POST)){
     $result = $stmt->execute($query_params);
   } catch(PDOException $e){
     $response["success"] = 0;
-    $response["message"] = "Database Error 1." . $e->getMessage();
+    $response["message"] = "Error disini Database Error 1." . $e->getMessage();
     die(json_encode($response));
   }
   $response["success"] = 2;
