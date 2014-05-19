@@ -17,15 +17,23 @@ if(!empty($_POST)){
 	$row = $stmt->fetch();
 	
 	if(!empty($row)) {
+		//Query get time
+		$q_time = "SELECT NOW() as now";
+		$stmt = $db->prepare($q_time);
+		$result = $stmt->execute();
+		$temp = $stmt->fetch();
+		$now = $temp["now"];
+		
 		$userID = $row['userID'];
 
 		//Create new comment in Comment table
 		$q_insert = "INSERT INTO Comment
-		VALUES (:reportID, :userID, :content, NOW())";
+		VALUES (:reportID, :userID, :content, :now";
 		$query_params = array(
 			':userID' => $userID,
 			':reportID' => $_POST['reportID'],
 			':content' => $_POST['content'],
+			':now' => $now
 			);
 		
 		try{
