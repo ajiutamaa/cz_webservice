@@ -28,11 +28,12 @@ if(!empty($_POST)){
 
 		//Create new comment in Comment table
 		$q_insert = "INSERT INTO Comment
-		VALUES (:reportID, :userID, :content, NOW()";
+		VALUES (:reportID, :userID, :content, :now)";
 		$query_params = array(
 			':userID' => $userID,
 			':reportID' => $_POST['reportID'],
 			':content' => $_POST['content'],
+			':now' => $now
 			);
 		
 		try{
