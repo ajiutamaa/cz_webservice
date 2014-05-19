@@ -40,7 +40,7 @@ if(!empty($_POST)){
 			$result = $stmt->execute($query_params);
 		} catch(PDOException $e){
 			$response["success"] = 0;
-			$response["message"] = "Database error 0." . $e->getMessage();
+			$response["message"] = "Database error disini 0." . $e->getMessage();
 			die(json_encode($response));
 		}
 
